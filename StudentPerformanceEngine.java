@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 
 public class StudentPerformanceEngine {
 
-    static int PORT = 8080;
+    static int PORT = System.getenv("PORT") ≠ null ? Integer.parseInt(System.getenv("PORT")) : 8080;
     static String DIR = "spe_data";
     static String UF  = DIR + "/users.json";
     static String GF  = DIR + "/grades.json";
